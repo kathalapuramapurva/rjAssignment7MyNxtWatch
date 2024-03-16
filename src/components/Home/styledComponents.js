@@ -45,7 +45,7 @@ export const BannerLogo = styled.img`
     margin-bottom: 10px;
   }
 `
-export const BannerHeading = styled.h1`
+export const BannerHeading = styled.p`
   color: #231f20;
   font-family: 'Roboto';
   font-size: 15px;
@@ -196,7 +196,7 @@ export const FailureParaHome = styled.p`
 `
 
 export const FailureRetryHomeButton = styled.button`
-  background-color: #3b82f6;
+  background-color: #4f46e5;
   color: #ffffff;
   font-family: 'Roboto';
   font-size: 12px;

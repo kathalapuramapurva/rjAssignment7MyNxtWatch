@@ -70,10 +70,6 @@ class Trending extends Component {
     }
   }
 
-  onFailureRetryRequest = () => {
-    this.getTrendingVideosList()
-  }
-
   renderSuccessHome = () => {
     const {videosList} = this.state
     return (
@@ -130,7 +126,7 @@ class Trending extends Component {
             </FailureParaTrending>
             <FailureRetryTrendingButton
               type="button"
-              onClick={this.onFailureRetryRequest}
+              onClick={this.getTrendingVideosList}
             >
               Retry
             </FailureRetryTrendingButton>

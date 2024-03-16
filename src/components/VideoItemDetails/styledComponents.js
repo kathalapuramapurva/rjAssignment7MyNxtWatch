@@ -49,7 +49,7 @@ export const VideoSpecificDetailsContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
 `
-export const Title = styled.h1`
+export const Title = styled.p`
   color: ${props => (props.isDarkTheme ? '#f1f1f1' : '#212121')};
   font-family: 'Roboto';
   font-size: 11px;
@@ -77,7 +77,7 @@ export const ViewsTimeResponseContainer = styled.div`
   }
 `
 
-export const ViewsPublishedTimeContainer = styled.ul`
+export const ViewsPublishedTimeContainer = styled.div`
   padding-left: 0px;
   display: flex;
   align-items: center;
@@ -85,8 +85,7 @@ export const ViewsPublishedTimeContainer = styled.ul`
   margin: 0px;
 `
 
-export const Views = styled.li`
-  list-style-type: none;
+export const Views = styled.p`
   color: ${props => (props.isDarkTheme ? '#94a3b8' : '#616e7c')};
   font-family: 'Roboto';
   font-size: 9px;
@@ -97,8 +96,7 @@ export const Views = styled.li`
   }
 `
 
-export const PublishedTime = styled.li`
-  list-style-type: disc;
+export const PublishedTime = styled.p`
   color: ${props => (props.isDarkTheme ? '#94a3b8' : '#616e7c')};
   font-family: 'Roboto';
   font-size: 9px;
@@ -198,28 +196,14 @@ export const ChannelSubscribers = styled.p`
 `
 
 export const ChannelDescription = styled.p`
-  color: ${props => (props.isDarkTheme ? '#94a3b8' : '#616e7c')};
-  font-family: 'Roboto';
-  font-size: 15px;
-  font-weight: 500;
-  margin-left: 5px;
-
-  margin-left: 0px;
   @media screen and (max-width: 768px) {
-    display: none;
-  }
-`
+    color: ${props => (props.isDarkTheme ? '#94a3b8' : '#616e7c')};
+    font-family: 'Roboto';
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 5px;
 
-export const ChannelDescriptionOut = styled.p`
-  color: #616e7c;
-  font-family: 'Roboto';
-  font-size: 9px;
-  font-weight: 500;
-  margin-left: 5px;
-
-  margin-left: 0px;
-  @media screen and (min-width: 767px) {
-    display: none;
+    margin-left: 0px;
   }
 `
 

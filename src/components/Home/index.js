@@ -99,10 +99,6 @@ class Home extends Component {
     this.getVideosList()
   }
 
-  onFailureRetryRequest = () => {
-    this.getVideosList()
-  }
-
   renderSuccessHome = () => {
     const {videosList} = this.state
     return (
@@ -164,10 +160,7 @@ class Home extends Component {
               We are having some trouble to complete your request. Please try
               again.
             </FailureParaHome>
-            <FailureRetryHomeButton
-              type="button"
-              onClick={this.onFailureRetryRequest}
-            >
+            <FailureRetryHomeButton type="button" onClick={this.getVideosList}>
               Retry
             </FailureRetryHomeButton>
           </FailureHomeContainer>

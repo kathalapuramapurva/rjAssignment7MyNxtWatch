@@ -105,11 +105,9 @@ export const VideoViews = styled.p`
   font-weight: 500;
   margin-right: 20px;
   @media screen and (min-width: 576px) {
-    list-style-type: none;
     font-size: 11px;
   }
   @media screen and (min-width: 768px) {
-    list-style-type: none;
     font-size: 15px;
   }
 `
@@ -119,7 +117,7 @@ export const VideoTime = styled.p`
   font-family: 'Roboto';
   font-size: 9px;
   font-weight: 500;
-  @meida screen and (min-width: 576px) {
+  @media screen and (min-width: 576px) {
     font-size: 11px;
   }
   @media screen and (min-width: 768px) {

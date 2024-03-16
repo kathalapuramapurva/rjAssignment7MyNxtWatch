@@ -31,9 +31,11 @@ const VideoItem = props => (
         viewCount,
         publishedAt,
       } = videoDetails
-      const years = formatDistanceToNow(new Date(publishedAt), {
-        addSuffix: true,
-      }).split(' ')[1]
+      const years = formatDistanceToNow(new Date(publishedAt))
+      const split = years.split(' ')
+      console.log(split)
+      const publishedTime = split[1].concat(' ', split[2])
+      console.log(publishedTime)
       return (
         <VideoListItem>
           <VideoNavigateLink to={`/videos/${id}`}>
@@ -49,7 +51,7 @@ const VideoItem = props => (
                   <VideoChannelName>{channelName}</VideoChannelName>
                   <VideoViewsTimeContainer>
                     <VideoViews>{viewCount} views</VideoViews>
-                    <VideoTime>{years} years ago</VideoTime>
+                    <VideoTime>{publishedTime} ago</VideoTime>
                   </VideoViewsTimeContainer>
                 </ChannelNameViewsYearsContainer>
               </VideoContentContainer>

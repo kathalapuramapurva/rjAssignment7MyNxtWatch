@@ -69,26 +69,21 @@ export const VideoChannelName = styled.p`
   margin-right: 20px;
 `
 
-export const VideoViewsTimeContainer = styled.ul`
+export const VideoViewsTimeContainer = styled.div`
   display: flex;
   align-items: center;
   padding-left: 0px;
 `
 
-export const VideoViews = styled.li`
-  list-style-type: disc;
+export const VideoViews = styled.p`
   color: #616e7c;
   font-family: 'Roboto';
   font-size: 9px;
   font-weight: 500;
   margin-right: 20px;
-  @media screen and (min-width: 576px) {
-    list-style-type: none;
-  }
 `
 
-export const VideoTime = styled.li`
-  list-style-type: disc;
+export const VideoTime = styled.p`
   color: #616e7c;
   font-family: 'Roboto';
   font-size: 9px;

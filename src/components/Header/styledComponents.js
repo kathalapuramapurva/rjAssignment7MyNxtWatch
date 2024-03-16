@@ -37,7 +37,6 @@ export const ButtonIcon = styled.button`
   }
 `
 export const ProfileImg = styled.img`
-  display: none;
   @media screen and (min-width: 768px) {
     display: inline;
     width: 35px;
@@ -68,7 +67,6 @@ export const LogoutIcon = styled.button`
 `
 
 export const LogoutButton = styled.button`
-  display: none;
   @media screen and (min-width: 768px) {
     display: flex;
     border: 1px solid ${props => (props.isDarkTheme ? '#f9f9f9' : '#3b82f6')};

@@ -30,7 +30,6 @@ import {
   ChannelName,
   ChannelSubscribers,
   ChannelDescription,
-  ChannelDescriptionOut,
   LoaderVideoDetails,
   FailureVideoDetailsContainer,
   FailureImgVideoDetails,
@@ -222,10 +221,6 @@ class VideoItemDetails extends Component {
                       </ChannelDescription>
                     </NameSubscribersContainers>
                   </LogoNameSubscriberContainer>
-
-                  <ChannelDescriptionOut isDarkTheme={isDarkTheme}>
-                    {description}
-                  </ChannelDescriptionOut>
                 </VideoChannelContainer>
               </VideoContentContainer>
             </>
