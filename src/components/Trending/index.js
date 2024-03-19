@@ -70,6 +70,10 @@ class Trending extends Component {
     }
   }
 
+  onFailureRetryTrending = () => {
+    this.getTrendingVideosList()
+  }
+
   renderSuccessHome = () => {
     const {videosList} = this.state
     return (
@@ -107,7 +111,7 @@ class Trending extends Component {
     </LoaderTrending>
   )
 
-  renderFailureHome = () => (
+  renderFailureTrending = () => (
     <NxtWatchContext.Consumer>
       {value => {
         const {isDarkTheme} = value
@@ -126,7 +130,7 @@ class Trending extends Component {
             </FailureParaTrending>
             <FailureRetryTrendingButton
               type="button"
-              onClick={this.getTrendingVideosList}
+              onClick={this.onFailureRetryTrending}
             >
               Retry
             </FailureRetryTrendingButton>
@@ -144,7 +148,7 @@ class Trending extends Component {
       case allApiStatusHome.inProgress:
         return this.renderLoaderHome()
       case allApiStatusHome.failure:
-        return this.renderFailureHome()
+        return this.renderFailureTrending()
       default:
         return null
     }

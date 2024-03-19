@@ -1,5 +1,3 @@
-import {formatDistanceToNow} from 'date-fns'
-
 import {
   VideoListItem,
   VideoNavigateLink,
@@ -31,10 +29,7 @@ const TrendingVideoItem = props => (
         viewCount,
         publishedAt,
       } = videoDetails
-      const years = formatDistanceToNow(new Date(publishedAt))
-      const split = years.split(' ')
-      console.log(split)
-      const publishedTime = split[1].concat(' ', split[2])
+
       return (
         <VideoListItem>
           <VideoNavigateLink to={`/videos/${id}`}>
@@ -50,7 +45,7 @@ const TrendingVideoItem = props => (
                   <VideoChannelName>{channelName}</VideoChannelName>
                   <VideoViewsTimeContainer>
                     <VideoViews>{viewCount} views</VideoViews>
-                    <VideoTime>{publishedTime} ago</VideoTime>
+                    <VideoTime>{publishedAt}</VideoTime>
                   </VideoViewsTimeContainer>
                 </ChannelNameViewsYearsContainer>
               </VideoContentContainer>

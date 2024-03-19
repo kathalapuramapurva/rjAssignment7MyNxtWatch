@@ -37,8 +37,10 @@ export const ButtonIcon = styled.button`
   }
 `
 export const ProfileImg = styled.img`
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
   @media screen and (min-width: 768px) {
-    display: inline;
     width: 35px;
     height: 35px;
     margin-left: 5px;
@@ -67,6 +69,9 @@ export const LogoutIcon = styled.button`
 `
 
 export const LogoutButton = styled.button`
+  @media screen and (max-width: 767px) {
+      display: none;
+  }
   @media screen and (min-width: 768px) {
     display: flex;
     border: 1px solid ${props => (props.isDarkTheme ? '#f9f9f9' : '#3b82f6')};
